@@ -1,6 +1,7 @@
 package com.sergiojavierre.dao;
 
 import com.sergiojavierre.dao.users.DAOUsers;
+import com.sergiojavierre.dao.users.DAOUsersMySQL;
 import com.sergiojavierre.dao.users.DAOUsersRAM;
 
 import java.util.Date;
@@ -22,7 +23,7 @@ public class DAOFactory {
 
     public DAOUsers getDaoUsers(){
         if(this.daoUsers == null){
-            this.daoUsers = new DAOUsersRAM();
+            this.daoUsers = new DAOUsersMySQL();
         }
         return this.daoUsers;
     }

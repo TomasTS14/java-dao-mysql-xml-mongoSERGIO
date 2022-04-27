@@ -3,6 +3,11 @@ package com.sergiojavierre.entities;
 public class User {
     private String alias, password, email;
 
+    public User(String alias, String email){
+        this.alias = alias;
+        this.email = email;
+    }
+
     public User(String alias, String password, String email) {
         this.alias = alias;
         this.password = password;
@@ -25,7 +30,6 @@ public class User {
     public String toString() {
         return "User{" +
                 "alias='" + alias + '\'' +
-                ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 '}';
     }
